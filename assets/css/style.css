@@ -329,6 +329,11 @@ a:hover{
         width: 55px;
         padding: 5px;
     }
+    .right-side-div{
+        position: sticky;
+        top: 10px;
+        z-index: 999;
+    }
 }
 
 
