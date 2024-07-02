@@ -344,11 +344,35 @@ a:hover{
     }
 }
 
+.Workflow-inner{
+    border-radius: 15px;
+}
+.res-color{
+    background-color: #35374B;
+}
+.lib-color{
+    background-color: #8E3E63;
+}
+.per-color{
+    background-color: #7469B6;
+}
+.cross-color{
+    background-color: #32012F;
+}
+.res-paragraph{
+    font-size: 12px;
+    font-weight: 200;
+}
+.res-paragraph p{
+    margin-bottom: 10px;
+}
 
-
-
-
-
+.client-img{
+    border-radius: 5px;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
 
 
 
@@ -411,7 +435,7 @@ a:hover{
   }
 
   .marquee__group img{
-    width: 100px;
+    width: 80px;
     margin-left: 20px;
   }
   
