@@ -97,7 +97,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3 mb-3">
+                            <div class="mt-3 mb-3" >
                                 <a href="./assets/pdf/Mohammad-Shahrukh-cv.pdf" download="Mohammad-Shahrukh-cv.pdf" class="nav-link">
                                     <button class="btn-downloadCV">
                                         <img src="./assets/icon/download.svg" alt=""> Download CV
@@ -107,20 +107,21 @@
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <div class="main-content">
+                        <div class="main-content" >
                             <div class="">
                                 <div class="tab-content" id="v-pills-tabContent">
                                     <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel" aria-labelledby="v-pills-about-tab">
                                         <div>
                                             <div>
-                                                <h1>About</h1>
+                                                <h1 id="set">About</h1>
                                             </div>
                                             <div>
                                                 <p>
-                                                    Qualified and professional web developer with <b style="color: #484848;">two years</b> of
-                                                    experience in <b style="color: #484848;">frontend developer</b> and <b style="color: #484848;">modern framework</b> like <b style="color: #484848;">React js</b>,
+                                                    A qualified and professional web developer with <b style="color: #484848;">two years</b> of
+                                                    experience in <b style="color: #484848;">frontend developer</b> and 
+                                                    modern framework like <b style="color: #484848;">NEXT.JS</b> & <b style="color: #484848;">REACT.JS</b>,
                                                     while prioritizing accessibility and SEO best practices. Strong creative
-                                                    and analytical skills. Team player with an eye for detail.
+                                                    and analytical skills.
                                                 </p>
                                             </div>
                                         </div>
@@ -138,7 +139,7 @@
                                                             <div>
                                                                 <p class="card-title">Web Development</p>
                                                                 <p class="card-des">
-                                                                    Experienced frontend web developer proficient in HTML5, CSS3, and Javascript, with a strong knowladge of modern JavaScript libraries and frameworks such as React.js and NEXT.js
+                                                                    Experienced frontend web developer proficient in HTML5, CSS3, and Javascript, with a strong knowladge of modern JavaScript libraries and frameworks such as <b>React.js</b> & <b>NEXT.js</b>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -806,7 +807,7 @@
                     <div class="col-lg-2 right-side-div">
                         <div class="right-side">
                             <div class="nav flex-lg-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <button class="nav-link active mb-lg-3" id="v-pills-about-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about" type="button" role="tab" aria-controls="v-pills-about" aria-selected="true">
+                                <button class="nav-link active mb-lg-3" id="v-pills-about-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about" type="button" role="tab" aria-controls="v-pills-about" aria-selected="true" onclick="scrollDiv()">
                                     <div class="nav-btn-icon">
                                         <img src="./assets/icon/admin.svg" alt="">
                                     </div>
@@ -902,6 +903,11 @@
             });
           });
         });
+      </script>
+      <script>
+        function scrollDiv() {
+		    document.getElementById("set").scrollIntoView({ behavior: "smooth", block: "center" });
+	    }
       </script>
 </body>
 </html>
