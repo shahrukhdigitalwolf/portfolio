@@ -107,18 +107,18 @@
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <div class="main-content" >
+                        <div id="main" class="main-content" >
                             <div class="">
                                 <div class="tab-content" id="v-pills-tabContent">
                                     <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel" aria-labelledby="v-pills-about-tab">
                                         <div>
                                             <div>
-                                                <h1 id="set">About</h1>
+                                                <h1 id="about">About</h1>
                                             </div>
                                             <div>
                                                 <p>
-                                                    A qualified and professional web developer with <b style="color: #484848;">two years</b> of
-                                                    experience in <b style="color: #484848;">frontend developer</b> and 
+                                                    A qualified and professional web developer with <b style="color: #484848;">Three years</b> of
+                                                    experience in <b style="color: #484848;">frontend developement</b> and 
                                                     modern framework like <b style="color: #484848;">NEXT.JS</b> & <b style="color: #484848;">REACT.JS</b>,
                                                     while prioritizing accessibility and SEO best practices. Strong creative
                                                     and analytical skills.
@@ -271,7 +271,7 @@
                                     <div class="tab-pane fade" id="v-pills-resume" role="tabpanel" aria-labelledby="v-pills-resume-tab">
                                         <div>
                                             <div>
-                                                <h1>Resume</h1>
+                                                <h1 id="resume">Resume</h1>
                                             </div>
                                             <div class="education">
                                                 <div class="d-flex align-items-center gap-3 pt-3 pb-3">
@@ -580,8 +580,8 @@
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="v-pills-work" role="tabpanel" aria-labelledby="v-pills-work-tab">
-                                        <div>
-                                            <h1>Projects</h1>
+                                        <div id="project">
+                                            <h1 >Projects</h1>
                                         </div>
                                         <div class="pt-3">
                                             <div>
@@ -755,7 +755,7 @@
                                     <div class="tab-pane fade" id="v-pills-blog" role="tabpanel" aria-labelledby="v-pills-blog-tab">
                                         <div>
                                             <div>
-                                                <h1>Blogs</h1>
+                                                <h1 id="blog">Blogs</h1>
                                             </div>
                                             <div>
                                                 <img class="img-fluid" src="./assets/img/photos/cnt.jpg" alt="">
@@ -765,7 +765,7 @@
                                     <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">
                                         <div>
                                             <div>
-                                                <h1>Contact</h1>
+                                                <h1 id="contact">Contact</h1>
                                             </div>
                                             <div class="login-box">
                                                 <div>
@@ -815,7 +815,7 @@
                                         About
                                     </div>
                                 </button>
-                                <button class="nav-link mb-lg-3" id="v-pills-resume-tab" data-bs-toggle="pill" data-bs-target="#v-pills-resume" type="button" role="tab" aria-controls="v-pills-resume" aria-selected="false">
+                                <button class="nav-link mb-lg-3" id="v-pills-resume-tab" data-bs-toggle="pill" data-bs-target="#v-pills-resume" type="button" role="tab" aria-controls="v-pills-resume" aria-selected="false" onclick="scrollDiv()">
                                     <div class="nav-btn-icon">
                                         <img src="./assets/icon/file.svg" alt="">
                                     </div>
@@ -823,7 +823,7 @@
                                         Resume
                                     </div>
                                 </button>
-                                <button class="nav-link mb-lg-3" id="v-pills-work-tab" data-bs-toggle="pill" data-bs-target="#v-pills-work" type="button" role="tab" aria-controls="v-pills-work" aria-selected="false">
+                                <button class="nav-link mb-lg-3" id="v-pills-work-tab" data-bs-toggle="pill" data-bs-target="#v-pills-work" type="button" role="tab" aria-controls="v-pills-work" aria-selected="false" onclick="scrollDiv()">
                                     <div class="nav-btn-icon">
                                         <img src="./assets/icon/suitcase.svg" alt="">
                                     </div>
@@ -831,7 +831,7 @@
                                         Work
                                     </div>
                                 </button>
-                                <button class="nav-link mb-lg-3" id="v-pills-blog-tab" data-bs-toggle="pill" data-bs-target="#v-pills-blog" type="button" role="tab" aria-controls="v-pills-blog" aria-selected="false">
+                                <button class="nav-link mb-lg-3" id="v-pills-blog-tab" data-bs-toggle="pill" data-bs-target="#v-pills-blog" type="button" role="tab" aria-controls="v-pills-blog" aria-selected="false" onclick="scrollDiv()">
                                     <div class="nav-btn-icon">
                                         <img src="./assets/icon/blog.svg" alt="">
                                     </div>
@@ -839,7 +839,7 @@
                                         Blog
                                     </div>
                                 </button>
-                                <button class="nav-link" id="v-pills-contact-tab" data-bs-toggle="pill" data-bs-target="#v-pills-contact" type="button" role="tab" aria-controls="v-pills-contact" aria-selected="false">
+                                <button class="nav-link" id="v-pills-contact-tab" data-bs-toggle="pill" data-bs-target="#v-pills-contact" type="button" role="tab" aria-controls="v-pills-contact" aria-selected="false" onclick="scrollDiv()">
                                     <div class="nav-btn-icon">
                                         <img src="./assets/icon/contact.svg" alt="">
                                     </div>
@@ -906,7 +906,14 @@
       </script>
       <script>
         function scrollDiv() {
-		    document.getElementById("set").scrollIntoView({ behavior: "smooth", block: "center" });
+            setTimeout(()=>{
+                document.getElementById("main").scrollIntoView({ behavior: "smooth", block: "start", offset: 10 });
+               /*  document.getElementById("about").scrollIntoView({ behavior: "smooth", block: "center" });
+                document.getElementById("resume").scrollIntoView({ behavior: "smooth", block: "center" });
+                document.getElementById("project").scrollIntoView({ behavior: "smooth", block: "center" });
+                document.getElementById("blog").scrollIntoView({ behavior: "smooth", block: "center" });
+                document.getElementById("contact").scrollIntoView({ behavior: "smooth", block: "center" }); */
+            },500)
 	    }
       </script>
 </body>
